@@ -51,6 +51,7 @@ export class ListeproduitsService {
     return test;
   }
 
+
 //delete
 delete(id:number):boolean{
   let test:boolean;

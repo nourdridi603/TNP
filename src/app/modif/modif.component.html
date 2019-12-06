@@ -1,6 +1,7 @@
 
-    <h2>Modifier un produit</h2>
+
     <div class="container">
+         <h2>Modifier un produit</h2>
        <form (ngSubmit)="submit(f)" #f="ngForm">
             <div class="form-group">
                   <label for="idd">Donnez l'identifiant du produit</label>
@@ -37,7 +38,9 @@
                   <button  class="btn btn-primary" type="submit" >Modifier</button>
 <button type="reset" class="btn btn-primary">Réinitialiser</button>  
        </form>
+       <br>
+       <div><button  class="btn btn-light"   (click)="onListCh()">Retour</button>
+       </div>
     </div>
-    <div><button  class="btn btn-light"   (click)="onListCh()">Retour</button>
-    </div>
+    
 

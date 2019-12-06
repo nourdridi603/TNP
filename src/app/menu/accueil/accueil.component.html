@@ -1,7 +1,6 @@
-
   <div class="container" >
 <div class="container">
-    <h2>Nos chaussures </h2>
+    <h2><b>Nos chaussures</b> </h2>
     <ul class="list-group">
         <li *ngFor="let c of tabproduit"  class="list-group-item">
             <img src="{{c.picture}}" style="width:20%; height:20%;"  >
@@ -9,6 +8,11 @@
              <button type="button" class="btn btn-info" [routerLink]="['/accueil', c.id]">Détail</button>
          </li>
     </ul>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Entrer un identifiant " name="search" #zoneI>
+    </div>
+    <button type="submit" (click)="onSubmit(zoneI.value)" class="btn btn-primary">Search</button>
+
  </div>
 
 

@@ -23,8 +23,7 @@ dte:Date=new Date();
   }
   submit(f:NgForm){
     let test:boolean;
-    test=this.produitService.update(this.id,this.titre,this.img,this.marquee,this.px,this.dispo,this.qnte,this.dte)
-    }
+    test=this.produitService.update(this.id,this.titre,this.img,this.marquee,this.px,this.dispo,this.qnte,this.dte)}
 
     onListCh() 
     { this.router.navigate(['']); }

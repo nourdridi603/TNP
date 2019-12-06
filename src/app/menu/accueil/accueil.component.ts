@@ -14,5 +14,6 @@ export class AccueilComponent implements OnInit {
   ngOnInit() {
     this.tabproduit=this.service.chaussures;
   }
- 
+  onSubmit(id:number)
+  { alert ("votre identifiant correspend à " + this.service.getChaussById(id).titre );}
 }
