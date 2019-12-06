@@ -3,10 +3,10 @@
   <div class="card" >
     <img class="card-img-top" src={{ch.picture}}  style="width:20%; height:20%;"  alt="Card image" />
     <div [ngSwitch]="ch.marque" class="c1">
-      <p *ngSwitchCase="'adidas'">   <img src="../assets/images-32.jpg"   style="width:40%; height:40%;"> </p>
-      <p *ngSwitchCase="'puma'">   <img src="../assets/5d54f02a5fb2246c3058171b3dd19f1b_preview_featured.jpg"  style="width:40%; height:40%;"> </p>
-      <p *ngSwitchCase="'asics'">   <img src="../assets/téléchargement.png"  style="width:60%; height:60%;"> </p>
-      <p *ngSwitchCase="'nike'">   <img src="../assets/1200px-Swoosh.svg.png"  style="width:20%; height:20%;"> </p>
+      <p *ngSwitchCase="'adidas'">   <img src="../assets/marque/images-32.jpg"   style="width:40%; height:40%;"> </p>
+      <p *ngSwitchCase="'puma'">   <img src="../assets/marque/5d54f02a5fb2246c3058171b3dd19f1b_preview_featured.jpg"  style="width:40%; height:40%;"> </p>
+      <p *ngSwitchCase="'asics'">   <img src="../assets/marque/téléchargement.png"  style="width:60%; height:60%;"> </p>
+      <p *ngSwitchCase="'nike'">   <img src="../assets/marque/1200px-Swoosh.svg.png"  style="width:20%; height:20%;"> </p>
       <p *ngSwitchDefault></p>
     </div>
     <div class="card-body">

@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { Page1Component } from './page1/page1.component';
 import { PipePPipe } from './pipe-p.pipe';
+import { ModifComponent } from './modif/modif.component';
+import { DeleteComponent } from './delete/delete.component';
 
 
 
@@ -25,7 +27,9 @@ import { PipePPipe } from './pipe-p.pipe';
     ProduitComponent,
     LoginComponent,
     Page1Component,
-    PipePPipe
+    PipePPipe,
+    ModifComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

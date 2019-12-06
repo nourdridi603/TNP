@@ -12,11 +12,7 @@ export class ProduitComponent implements OnInit {
  ident:number;
  ch:Produits;
  disp:Boolean;
- tabImage=[ "../assets/5d54f02a5fb2246c3058171b3dd19f1b_preview_featured.jpg",
- "1200px-Swoosh.svg",
- "images-32",
- "téléchargement"
- ];
+ 
   constructor(private router:Router,private activatedRoute:ActivatedRoute ,private service:ListeproduitsService) { }
 
   ngOnInit() {

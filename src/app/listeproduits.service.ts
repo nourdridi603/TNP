@@ -6,13 +6,13 @@ import { TestBed } from '@angular/core/testing';
   providedIn: 'root'
 })
 export class ListeproduitsService {
-  chaussures=[new Produits(154,"Chaussures kid adidas","../assets/chaussures-kid-adidas-hoops-20-mid_4_v2.jpeg","adidas",140000,true,20,new Date(14/12/2018)),
-              new Produits(289,"Grand-court","../assets/grand-court-k-noir--blanc_1_v1.jpg","adidas",150000,true,30,new Date(15/11/2019)),
-              new Produits(369,"Nike air zoom pegasus","../assets/nike-air-zoom-pegasus-36_1_v1.jpg","nike",200000,false,0,new Date(12/10/2019)),
-              new Produits(912,"Nano 9.0 Noir","../assets/Nano_9.0_Noir_EG4635_01_standard.jpg","asics",230000,true,50,new Date(22/8/2019)),
-              new Produits(658,"Nano 9.0 Blanc","../assets/Nano_9.0_Blanc_EG1474_01_standard.jpg","asics",200000,false,0,new Date(2/10/2019)),
-              new Produits(658,"maisieleblanc puma 2019","../assets/602-maisieleblanc-puma-en-2019-chaussure-chaussure-puma-et-5733.jpg","puma",110000,true,10,new Date(14/9/2019)),
-              new Produits(658,"footkorner chaussures puma","../assets/footkorner-chaussures-puma-rs-x-bold-noir-toucan-372715-01.jpg","puma",100000,true,5,new Date(28/10/2019))];
+  chaussures=[new Produits(154,"Chaussures kid adidas","../assets/chaussures-kid-adidas-hoops-20-mid_4_v2.jpeg","adidas",140000,true,20, new Date("2019-01-16")),
+              new Produits(289,"Grand-court","../assets/grand-court-k-noir--blanc_1_v1.jpg","adidas",150000,true,30,new Date("2019-11-15")),
+              new Produits(369,"Nike air zoom pegasus","../assets/nike-air-zoom-pegasus-36_1_v1.jpg","nike",200000,false,0,new Date("2019-10-12")),
+              new Produits(912,"Nano 9.0 Noir","../assets/Nano_9.0_Noir_EG4635_01_standard.jpg","asics",230000,true,50,new Date("2019-08-22")),
+              new Produits(658,"Nano 9.0 Blanc","../assets/Nano_9.0_Blanc_EG1474_01_standard.jpg","asics",200000,false,0,new Date("2019-10-02")),
+              new Produits(123,"maisieleblanc puma 2019","../assets/602-maisieleblanc-puma-en-2019-chaussure-chaussure-puma-et-5733.jpg","puma",110000,true,10,new Date("2019-09-14")),
+              new Produits(789,"footkorner chaussures puma","../assets/footkorner-chaussures-puma-rs-x-bold-noir-toucan-372715-01.jpg","puma",100000,true,5,new Date("2019-10-28"))];
 
 
 

@@ -6,6 +6,8 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { Error404Component } from './error404/error404.component';
 import { LoginComponent } from './login/login.component';
 import { ProduitComponent } from './produit/produit.component';
+import { ModifComponent } from './modif/modif.component';
+import { DeleteComponent } from './delete/delete.component';
 
 
 const routes: Routes = [
@@ -14,6 +16,8 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"contactus",component:ContactusComponent},
   {path:'accueil/:id', component:ProduitComponent},
+  {path:"modif",component:ModifComponent},
+  {path:"delete",component:DeleteComponent},
   {path:"**",component:Error404Component}
 
 ];

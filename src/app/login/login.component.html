@@ -1,40 +1,19 @@
 
-<!doctype html>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<html>
-    <body>
-<div class="container">
-	<div class="d-flex justify-content-center">
-		<div class="card">
-			<div class="card-header">
-				<h3>Sign In</h3>
-			</div>
-			<div class="card-body">
-				<form>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"></span>
-						</div>
-						<input type="text" class="form-control" placeholder="username">
-					</div>
-					
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"></span>
-						</div>
-						<input type="password" class="form-control" placeholder="password">
-					</div>
-					<br>
-					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn"  (click)="onajout()">
-					</div>
-				</form>
-			</div>
-		
-		</div>
+
+<body>
+<div class="login-page">
+	<div class="form">
+	
+	  <form class="login-form">
+		  <p style="text-align: left;">Entrer votre nom:
+		<input type="text" placeholder="username"/>
+		Entrer votre mot de passe:
+		<input type="password" placeholder="password"/>
+		<button (click)="onajout()" >login</button>
+	
+	  </form>
 	</div>
-</div>
-
-
+  </div>
+  <br>
+  <br>
 </body>
-</html>

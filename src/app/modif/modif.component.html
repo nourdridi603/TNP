@@ -1,0 +1,43 @@
+
+    <h2>Modifier un produit</h2>
+    <div class="container">
+       <form (ngSubmit)="submit(f)" #f="ngForm">
+            <div class="form-group">
+                  <label for="idd">Donnez l'identifiant du produit</label>
+                  <input type="number" id="idd"  name="id" [(ngModel)]="id" class="form-control" #idd="ngModel">
+               </div>
+               <div class="form-group">
+                     <label for="ttre">Donnez le titre à changer</label>
+                     <input type="text" id="ttre"  name="titre" [(ngModel)]="titre" class="form-control" #ttre="ngModel">
+                  </div>
+         <div class="form-group">
+            <label for="image2">Donnez le chemin de l'image:</label>
+         <input type="text" id="image2" name="image" [(ngModel)]="img" required  #zoneIm="ngModel" class="form-control"/>
+         </div>
+         <div class="form-group">
+            <label for="marq">Donnez la nouvelle marque</label>
+            <input type="text" id="marq"  name="marquee" [(ngModel)]="marquee" class="form-control" #marqu="ngModel">
+         </div>
+         <div class="form-group">
+            <label for="prx">Donnez le nouveau prix</label>
+            <input type="number" id="prx"  name="prx" [(ngModel)]="px" class="form-control" #pr="ngModel">
+         </div>
+         <div class="form-group">
+               <label for="dispp">Changez la disponibilité du produit si vous le souhaitez</label>
+               <input type="text" id="dispp"  name="dispo" [(ngModel)]="dispo" class="form-control" #dis="ngModel">
+            </div>
+            <div class="form-group">
+                  <label for="quantite">Donnez la nouvelle quantité en stock</label>
+                  <input type="number" id="quantite"  name="qnte" [(ngModel)]="qnte" class="form-control" #quantite="ngModel">
+               </div>
+               <div class="form-group">
+                     <label for="date">Modifiez la date de fabrication</label>
+                     <input type="date" id="date"  name="dte" [(ngModel)]="dte" class="form-control" #date="ngModel">
+                  </div>
+                  <button  class="btn btn-primary" type="submit" >Modifier</button>
+<button type="reset" class="btn btn-primary">Réinitialiser</button>  
+       </form>
+    </div>
+    <div><button  class="btn btn-light"   (click)="onListCh()">Retour</button>
+    </div>
+
