@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>{{ch.titre}}</h2>
+  <div class="card" >
+    <img class="card-img-top" src={{ch.picture}}  style="width:20%; height:20%;"  alt="Card image" />
+    <div [ngSwitch]="ch.marque" class="c1">
+      <p *ngSwitchCase="'adidas'">   <img src="../assets/images-32.jpg"   style="width:40%; height:40%;"> </p>
+      <p *ngSwitchCase="'puma'">   <img src="../assets/5d54f02a5fb2246c3058171b3dd19f1b_preview_featured.jpg"  style="width:40%; height:40%;"> </p>
+      <p *ngSwitchCase="'asics'">   <img src="../assets/téléchargement.png"  style="width:60%; height:60%;"> </p>
+      <p *ngSwitchCase="'nike'">   <img src="../assets/1200px-Swoosh.svg.png"  style="width:20%; height:20%;"> </p>
+      <p *ngSwitchDefault></p>
+    </div>
+    <div class="card-body">
+     
+      <p class="card-text"> 
+          <br>
+          <br>
+      <b>Id :</b>  {{ch.id}}
+      <br>
+      <b> Prix :</b>  {{ch.prix|pipeP}}
+      <br>
+      <b>Marque :</b>{{ch.marque}}
+        <br>
+  
+      
+      </p>
+
+      <div  *ngIf=" disp==true ; else B"> 
+          <p>{{ch.titre|uppercase}}  est disponible  en {{ch.qte}}  pieces fabriqué le {{ch.datefabrication|date:'dd/MM/yyyy'}} </p>
+        </div>
+        <ng-template  #B > {{ch.titre}}  n'est plus disponible </ng-template>
+  
+    <br>
+    <br><br>
+      <a (click)="onListCh()" class="btn btn-primary">Tous les Chaussures</a>
+    </div>
+  </div>
+
+
+</div>

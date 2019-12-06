@@ -1,0 +1,111 @@
+
+<div class="container">
+    <h2>Ajout d'une Chaussure</h2>
+    <form    #form="ngForm" (ngSubmit)="onSubmit(form)">
+        
+    <label>Donnez l'identifiant du chaussure:</label>
+    <input type="number" id="i" name="id" [(ngModel)]="identifiant"   required  #zoneId="ngModel"     class="form-control"  >
+    <div *ngIf="zoneId.invalid && zoneId.dirty" class="alert alert-danger"> L'identifiant doit être un nombre </div>
+    <div [hidden]="!zoneId?.errors.required || zoneId?.pristine" class="alert alert-danger"> L'identifiant est obligatoire </div>
+
+    <label>Donnez le titre:</label>
+    <input type="text" id="titre" name="titre" [(ngModel)]="titre" required  pattern="[A-Z][a-zA-Z]+" class="form-control"   #zoneT="ngModel">
+    <div *ngIf="zoneT.errors?.pattern && zoneT.dirty"  class="alert alert-danger"> Le titre doit commencer par une majuscule suivie d'au moins 1 caractère </div>
+    <div [hidden]="!zoneT?.errors.required || zoneT.pristine" class="alert alert-danger"> Le titre est  obligatoire </div>
+
+
+
+    <label>Donnez le chemin de l'image:</label>
+    <input type="text" id="image" name="image" [(ngModel)]="image" required  #zoneIm="ngModel"  pattern="./[a-z\-_0-9\/\:\.]*.(jpg|jpeg|png|gif)"  class="form-control"/>
+    <div *ngIf="zoneIm.errors?.pattern && zoneIm.dirty"  class="alert alert-danger"> Le chemin doit commencer par "./" et finir par la forme de l'image: </div>
+   
+    <label>Donnez sa marque :</label>
+    <select type="marque" id="marque" name="marque" [(ngModel)]="marque" required  class="form-control"   #zoneM="ngModel">
+       <option value="adidas">Adidas</option>
+       <option value="puma">Puma</option>
+       <option value="asics">Asics</option>
+       <option value="nike">Nike</option>
+    </select>
+    <div *ngIf="zoneM.errors?.pattern && zoneM.dirty"  class="alert alert-danger"> Le titre doit commencer par une majuscule suivie d'au moins 1 caractère </div>
+    <div [hidden]="!zoneM?.errors.required || zoneM.pristine" class="alert alert-danger"> La marque est  obligatoire </div>
+
+
+    <label>Donnez le prix :</label>
+    <input type="number" id="prix" name="prix" [(ngModel)]="prix" required  #zoneP="ngModel"class="form-control"/>
+ <div [hidden]="!zoneP.errors?.required || zoneP.pristine" class="alert alert-danger"> Le champs est  obligatoire </div>
+
+
+
+    <label>Donnez la disponibilité:</label>
+   <select  #zoneD="ngModel"  [(ngModel)]="dispo" name="disp" class="form-control" required>
+        <option value="true" >Disponible</option>
+        <option value="false">Non disponible</option>
+   </select>
+   <div [hidden]="!zoneD?.errors.required || zoneD.pristine" class="alert alert-danger"> Le champs est  obligatoire </div>
+     
+
+   <label>Donnez la quantité en stock:</label>
+   <input type="number" id="qte" name="qte" [(ngModel)]="qte" [disabled]="zoneD.value=='false'"  #zoneQte="ngModel"  class="form-control"/>
+
+   
+    <label>Donnez la date de fabrication:</label>
+    <input type="date" id="dateF" name="dateF" [(ngModel)]="dateF" required  #zoneDf="ngModel" class="form-control"/>
+    <div [hidden]="!zoneF?.errors.required || zoneF.pristine" class="alert alert-danger"> Le champs est  obligatoire </div>
+
+    <button  class="btn btn-primary" [disabled]="form.invalid" >Ajouter</button>
+   <button type="reset" class="btn btn-primary">Réinitialiser</button>  
+</form>
+    </div>
+    <div>
+       <h2>Modifier un produit</h2>
+       <div class="container">
+          <form (ngSubmit)="submit(f)" #f="ngForm">
+               <div class="form-group">
+                     <label for="idd">Donnez l'identifiant du produit</label>
+                     <input type="number" id="idd"  name="id" [(ngModel)]="id" class="form-control" #idd="ngModel">
+                  </div>
+                  <div class="form-group">
+                        <label for="ttre">Donnez le titre à changer</label>
+                        <input type="text" id="ttre"  name="titre" [(ngModel)]="titre" class="form-control" #ttre="ngModel">
+                     </div>
+            <div class="form-group">
+               <label for="image2">Donnez le chemin de l'image:</label>
+    <input type="text" id="image2" name="image" [(ngModel)]="img" required  #zoneIm="ngModel" class="form-control"/>
+            </div>
+            <div class="form-group">
+               <label for="marq">Donnez la nouvelle marque</label>
+               <input type="text" id="marq"  name="marquee" [(ngModel)]="marquee" class="form-control" #marqu="ngModel">
+            </div>
+            <div class="form-group">
+               <label for="prx">Donnez le nouveau prix</label>
+               <input type="number" id="prx"  name="prx" [(ngModel)]="px" class="form-control" #pr="ngModel">
+            </div>
+            <div class="form-group">
+                  <label for="dispp">Changez la disponibilité du produit si vous le souhaitez</label>
+                  <input type="text" id="dispp"  name="dispo" [(ngModel)]="dispo" class="form-control" #dis="ngModel">
+               </div>
+               <div class="form-group">
+                     <label for="quantite">Donnez la nouvelle quantité en stock</label>
+                     <input type="number" id="quantite"  name="qnte" [(ngModel)]="qnte" class="form-control" #quantite="ngModel">
+                  </div>
+                  <div class="form-group">
+                        <label for="date">Modifiez la date de fabrication</label>
+                        <input type="date" id="date"  name="dte" [(ngModel)]="dte" class="form-control" #date="ngModel">
+                     </div>
+                     <button  class="btn btn-primary" type="submit" >Modifier</button>
+   <button type="reset" class="btn btn-primary">Réinitialiser</button>  
+          </form>
+       </div>
+       <div>
+         <h2>Supprimer un produit</h2>
+         <div class="container">
+            <form (ngSubmit)="sub(f)" #f="ngForm">
+                 <div class="form-group">
+                       <label for="idd">Donner l'id du produit à supprimer</label>
+                       <input type="number" id="idd"  name="id" [(ngModel)]="id" class="form-control" #idd="ngModel">
+                    </div>
+                    <button  class="btn btn-primary" type="submit" >supprimer</button>
+                    </form>
+                    </div>
+                    </div>
+    </div>

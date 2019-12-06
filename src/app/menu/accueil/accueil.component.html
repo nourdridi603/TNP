@@ -1,0 +1,16 @@
+
+  <div class="container" >
+<div class="container">
+    <h2>Nos chaussures </h2>
+    <ul class="list-group">
+        <li *ngFor="let c of tabproduit"  class="list-group-item">
+            <img src="{{c.picture}}" style="width:20%; height:20%;"  >
+             <div class="tit">  {{c.titre}} <h5> Prix:{{c.prix|pipeP}}</h5>  </div>
+             <button type="button" class="btn btn-info" [routerLink]="['/accueil', c.id]">Détail</button>
+         </li>
+    </ul>
+ </div>
+
+
+    
+
